@@ -61,17 +61,6 @@ h1, h2, h3, h4, h5, h6 {
   transition: background 0.5s;
 }
 
-.containerimg {
-    width: 300px;
-    height: 100px;
-}
-
-/* resize images */
-.containerimg img {
-    width: auto;
-    height: 100%;
-}
-
 @media (max-width: 768px) {
   .back-to-top {
     bottom: 15px;
@@ -87,6 +76,14 @@ h1, h2, h3, h4, h5, h6 {
 .back-to-top:hover {
   background: #80ffd9;
   color: #fff;
+}
+
+.vertical-center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 /*--------------------------------------------------------------
@@ -129,8 +126,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #header #logo img {
-  padding: 0;
-  margin: 0;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 @media (max-width: 768px) {
@@ -147,6 +144,21 @@ h1, h2, h3, h4, h5, h6 {
   padding: 20px 0;
   height: 72px;
   transition: all 0.5s;
+}
+
+.containerimg {
+  padding-top: 40px;
+}
+
+/* resize images */
+.containerimg img {
+    width: auto;
+    height: 100%;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
 }
 
 /*--------------------------------------------------------------
@@ -497,8 +509,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 --------------------------------*/
 .section-header .section-title {
   font-size: 32px;
-  color: #111;
-  text-transform: uppercase;
+  color: rgb(0, 0, 0);
   text-align: center;
   font-weight: 700;
   margin-bottom: 5px;
@@ -507,7 +518,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 .section-header .section-description {
   text-align: center;
   padding-bottom: 40px;
-  color: #999;
+  color: rgb(58, 58, 58);
 }
 
 /* About Us Section
@@ -613,9 +624,14 @@ body.mobile-nav-active #mobile-nav-toggle {
 /* Services Section
 --------------------------------*/
 #services {
-  background: #fff;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/services-bg.jpg) fixed center center;
+  background-size: cover;
   background-size: cover;
   padding: 80px 0 60px 0;
+}
+
+#services h3 {
+  color: #eee;
 }
 
 #services .box {
@@ -623,9 +639,9 @@ body.mobile-nav-active #mobile-nav-toggle {
   margin-bottom: 50px;
   text-align: center;
   border: 1px solid #e6e6e6;
-  height: 200px;
+  height: 120px;
   position: relative;
-  background: #fafafa;
+  background: #e9e8e8;
 }
 
 #services .icon {
@@ -671,11 +687,10 @@ body.mobile-nav-active #mobile-nav-toggle {
   font-weight: 700;
   font-size: 18px;
   margin-bottom: 15px;
-  text-transform: uppercase;
 }
 
 #services .title a {
-  color: #111;
+  color: rgb(45, 117, 35);
 }
 
 #services .description {
@@ -733,7 +748,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 --------------------------------*/
 #portfolio {
   background: #f7f7f7;
-  padding: 80px 0;
+  padding: 60px 0;
 }
 
 #portfolio #portfolio-wrapper {
@@ -745,6 +760,21 @@ body.mobile-nav-active #mobile-nav-toggle {
   margin: 0 0 45px 0;
   list-style: none;
   text-align: center;
+}
+
+.portfolio-img {
+  padding-top: 20px;
+}
+
+/* resize images */
+.portfolio-img img {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    position: inherit;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
 }
 
 #portfolio #portfolio-flters li {
@@ -770,6 +800,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 #portfolio .portfolio-item {
   position: relative;
   height: 200px;
+  width: auto;
   overflow: hidden !important;
   margin-bottom: 15px;
   transition: all 350ms ease;
@@ -875,7 +906,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 --------------------------------*/
 #contact {
   background: #f7f7f7;
-  padding: 80px 0 40px 0;
+  padding: 10px 0 30px 0;
 }
 
 #contact #google-map {
