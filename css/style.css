@@ -530,7 +530,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #about .about-container .background {
   min-height: 300px;
-  background: url(../img/about-img.jpg) center top no-repeat;
+  /* background: url(../img/about-img.jpg) center top no-repeat; */
   margin-bottom: 10px;
 }
 
@@ -906,7 +906,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 --------------------------------*/
 #contact {
   background: #f7f7f7;
-  padding: 10px 0 30px 0;
+  padding: 50px 0 30px 0;
 }
 
 #contact #google-map {
